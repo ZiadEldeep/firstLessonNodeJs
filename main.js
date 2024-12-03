@@ -21,4 +21,4 @@ console.log(err);
     });
     // res.send('Hello World!')  
 })
-app.listen(port, () =>  console.log(`Example app liistening on poort ${port}!`))
+app.listen(port, () =>  console.log(`Example app liistening on port ${port}!`))
