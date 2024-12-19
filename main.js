@@ -1,24 +1,29 @@
-//importing express lib. 
-const  express = require('express')
-//taking instance from express
-const app = express()
-//localhost:30
-const port = 30
-const mysql=require('mysql2')
-//connection to database as sql not mongodb
-const q=mysql.createConnection({
-    host: 'localhost',
-    database: 'nodedb',
-    user:'root',
-    password:''
-})
-// endpoint called hello with getter
-app.get('/hello', (req, res) => {
-    q.execute(`select * from users`,(err,result)=>{
-console.log(err);
-      //taking te data from database as jeson file
-        res.json({user: result});
-    });
-    // res.send('Hello World!')  
-})
-app.listen(port, () =>  console.log(`Example app listening on port ${port}!`))
+const http = require('http');  // Corrected the import statement
+const port=3000
+
+const app = http.createServer((req, res) => {
+    let myObj=[
+        {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
+        {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
+        {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
+        {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
+        {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
+        {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
+        {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
+        {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
+    ]
+    const {url,method} =req
+    if(url=='/'&&method=='GET'){
+        res.write('hello in home api')
+    }
+    else if(url=='/posts'){
+        res.write('hello posts api')
+    }
+    else{
+        res.write('<h1 style="color:red">404 NOT FOUND Page</h1>')        
+    }
+    res.end()
+});
+app.listen(3000, () => {
+    console.log(`Server is running on port ${port}`);
+});
