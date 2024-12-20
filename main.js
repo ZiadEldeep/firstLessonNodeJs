@@ -64,7 +64,7 @@ let myObj=[
         })
         app.post('/addUser',(req,res)=>{
             console.log(req.body);          
-            res.send('addeeddddd')
+            res.send('addeedddd')
         })
         app.get('*',(req,res)=>{
             res.send('404 NOT FOUND PAGE')
