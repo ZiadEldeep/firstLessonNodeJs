@@ -3,10 +3,10 @@
 
 // // const app = http.createServer((req, res) => {
 // //     let myObj=[
-// //         {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
-// //         {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
-// //         {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
-// //         {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
+// //         {name:'ziad',age:22,email:'ziaeldeep84@gmail.com'},
+// //         {name:'ziad',age:21,email:'ziaeldeep84@gmail.com'},
+// //         {name:'ziad',age:29,email:'ziaeldeep84@gmail.com'},
+// //         {name:'ziad',age:20,email:'ziaeldeep84@gmail.com'},
 // //         {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
 // //         {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
 // //         {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
