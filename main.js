@@ -52,9 +52,9 @@ let myObj=[
             {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
             {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
             {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
-            {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
-            {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
-            {name:'ziad',age:23,email:'ziaeldeep84@gmail.com'},
+            {name:'ziad',age:20,email:'ziaeldeep84@gmail.com'},
+            {name:'ziad',age:22,email:'ziaeldeep84@gmail.com'},
+            {name:'ziad',age:24,email:'ziaeldeep84@gmail.com'},
         ]
         const express=require('express')
         const app=express()
