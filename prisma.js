@@ -1,12 +1,16 @@
 const { PrismaClient } = require("@prisma/client");
 
-const globalForPrisma = global 
+// Use globalThis for compatibility across environments
+const globalForPrisma = globalThis;
 
 const prisma =
   globalForPrisma.prisma ??
   new PrismaClient({
-    log: ["query", "info", "warn", "error"],
+    log: ["query", "info", "warn", "error"], // Logging options for debugging
   });
 
-  module.exports = { prisma };
+// Export the prisma client instance
+module.exports = { prisma };
+
+// In development mode, persist Prisma client across hot-reloads
 if (process.env.NODE_ENV !== "production") globalForPrisma.prisma = prisma;
