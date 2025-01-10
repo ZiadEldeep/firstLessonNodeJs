@@ -10,7 +10,7 @@ app.use(cors());
 app.get("/select", async (req, res) => {
   try {
     const products = await prisma.product.findMany();
-    res.json({ message: "success", products });
+    res.json({ message: "successs", products });
   } catch (error) {
     res.status(500).json({ message: "Error fetching products", error });
     console.error(error);
