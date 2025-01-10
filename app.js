@@ -32,36 +32,36 @@ app.post("/registerApi", async (req, res) => {
 });
 
 // Route: Add a new product
-app.post("/addProduct", async (req, res) => {
-  const { name, description, price } = req.body;
-  const priceValue = parseFloat(price);
-  if (isNaN(priceValue)) {
-    return res.status(400).json({ message: "Invalid price value" });
-  }
-  try {
-    await prisma.product.create({
-      data: { name, description, price: priceValue },
-    });
-    res.json({ message: "success" });
-  } catch (error) {
-    res.status(500).json({ message: "Error adding product", error });
-    console.error(error);
-  }
-});
+// app.post("/addProduct", async (req, res) => {
+//   const { name, description, price } = req.body;
+//   const priceValue = parseFloat(price);
+//   if (isNaN(priceValue)) {
+//     return res.status(400).json({ message: "Invalid price value" });
+//   }
+//   try {
+//     await prisma.product.create({
+//       data: { name, description, price: priceValue },
+//     });
+//     res.json({ message: "success" });
+//   } catch (error) {
+//     res.status(500).json({ message: "Error adding product", error });
+//     console.error(error);
+//   }
+// });
 
-// Route: Delete a product
-app.delete("/delete", async (req, res) => {
-  const { id } = req.body;
-  try {
-    await prisma.product.delete({
-      where: { id: String(id) }, // Cast ID to string for MongoDB
-    });
-    res.json({ message: "success" });
-  } catch (error) {
-    res.status(500).json({ message: "Error deleting product", error });
-    console.error(error);
-  }
-});
+//  Route: Delete a product
+// app.delete("/delete", async (req, res) => {
+//   const { id } = req.body;
+//   try {
+//     await prisma.product.delete({
+//       where: { id: String(id) }, // Cast ID to string for MongoDB
+//     });
+//     res.json({ message: "success" });
+//   } catch (error) {
+//     res.status(500).json({ message: "Error deleting product", error });
+//     console.error(error);
+//   }
+// });
 
 // Start server
 app.listen(3999, () => {
