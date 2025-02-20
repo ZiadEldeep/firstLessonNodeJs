@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cors());
 
 // Route: Get all products
-app.get("/selecct", async (req, res) => {
+app.get("/select", async (req, res) => {
   try {
     const products = await prisma.product.findMany();
     res.json({ message: "successs", products });
